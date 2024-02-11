@@ -118,7 +118,7 @@ class RateMap(collections.abc.Mapping):
         """
         Returns the midpoint of each interval.
         """
-        mid = self.left + self.span / 2
+        mid = self.left + (self.right - self.left) / 2
         mid.flags.writeable = False
         return mid
 
